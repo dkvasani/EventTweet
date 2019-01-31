@@ -15,7 +15,7 @@ Route::get('/', 'QrController@index');
 Route::get('/words', 'QrController@generate_sentence');
 Route::get('/tweet', 'QrController@tweet');
 Route::get('/words-url', 'QrController@words_url');
-
+Route::get('/get-tweet','QrController@getTweet');
 
 App::singleton('App\Tweet\Qr',function () {
     return new \App\Tweet\Qr(config(''));
